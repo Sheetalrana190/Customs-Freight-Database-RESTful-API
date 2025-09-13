@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "SENG8071 - Trip CRUD",
+    "_postman_id": "e1c9b823-748b-4de1-a6c1-8f76a8764f91",
+    "description": "CRUD operations for Trips in SENG8071 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Trips",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:3000/trips" } }
+    },
+    {
+      "name": "Get Trip by ID (1)",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:3000/trips/1" } }
+    },
+    {
+      "name": "Create Trip",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"RouteFrom\": \"Toronto\",\n  \"RouteTo\": \"Vancouver\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/trips" }
+      }
+    },
+    {
+      "name": "Update Trip (ID 1)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"RouteTo\": \"Calgary\"\n}" },
+        "url": { "raw": "http://localhost:3000/trips/1" }
+      }
+    },
+    {
+      "name": "Delete Trip (ID 1)",
+      "request": { "method": "DELETE", "url": { "raw": "http://localhost:3000/trips/1" } }
+    }
+  ]
+}

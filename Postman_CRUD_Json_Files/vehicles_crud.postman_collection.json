@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "SENG8071 - Vehicle CRUD",
+    "_postman_id": "1c3b9a87-d56b-4bb0-a6c7-b8a9b4f2e789",
+    "description": "CRUD operations for Vehicles in SENG8071 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Vehicles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/vehicles",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vehicles"]
+        }
+      }
+    },
+    {
+      "name": "Get Vehicle by ID (5)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/vehicles/5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vehicles", "5"]
+        }
+      }
+    },
+    {
+      "name": "Create Vehicle (ID 17)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"VehicleID\": 17,\n  \"VehicleType\": \"Long Haul Truck\",\n  \"Brand\": \"CustomBrand\",\n  \"LoadCapacityKg\": 18000,\n  \"Year\": 2023,\n  \"NumRepairs\": 0\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/vehicles",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vehicles"]
+        }
+      }
+    },
+    {
+      "name": "Update Vehicle (ID 17)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"Brand\": \"UpdatedBrandName\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/vehicles/17",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vehicles", "17"]
+        }
+      }
+    },
+    {
+      "name": "Delete Vehicle (ID 17)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/vehicles/17",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vehicles", "17"]
+        }
+      }
+    }
+  ]
+}

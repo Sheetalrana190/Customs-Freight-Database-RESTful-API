@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "SENG8071 - Shipment CRUD",
+    "_postman_id": "e1c9b823-748b-4de1-a6c1-8f76a8764f92",
+    "description": "CRUD operations for Shipments in SENG8071 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Shipments",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:3000/shipments" } }
+    },
+    {
+      "name": "Get Shipment by ID (1)",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:3000/shipments/1" } }
+    },
+    {
+      "name": "Create Shipment",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"CustomerID\": 1,\n  \"WeightKg\": 5000,\n  \"Value\": 20000.50,\n  \"Origin\": \"Toronto\",\n  \"Destination\": \"New York\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/shipments" }
+      }
+    },
+    {
+      "name": "Update Shipment (ID 1)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"Value\": 25000.00\n}" },
+        "url": { "raw": "http://localhost:3000/shipments/1" }
+      }
+    },
+    {
+      "name": "Delete Shipment (ID 1)",
+      "request": { "method": "DELETE", "url": { "raw": "http://localhost:3000/shipments/1" } }
+    }
+  ]
+}
